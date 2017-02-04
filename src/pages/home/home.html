@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Lista de Revistas</ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content>
+  <button ion-button full icon-left>
+  		<ion-icon name="add"></ion-icon>
+  		Nova Revista
+  </button>
+  <ion-searchbar>
+</ion-searchbar>
+<ion-list>
+  <button ion-item *ngFor="let item of items" (click)="openPage(resisita)"> 
+    {{ item.nome }}
+  </button>  
+</ion-list>
+
+</ion-content>
