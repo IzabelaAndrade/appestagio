@@ -1,15 +1,17 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
 
+import { HomePage } from '../pages/home/home';
+import { LoginPage } from '../pages/login/login';
 import { RevisitaPage } from '../pages/revisita/revisita';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    RevisitaPage
+    RevisitaPage,
+    LoginPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -18,8 +20,11 @@ import { RevisitaPage } from '../pages/revisita/revisita';
   entryComponents: [
     MyApp,
     HomePage,
-    RevisitaPage
+    RevisitaPage,
+    LoginPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
-export class AppModule {}
+export class AppModule {
+
+}
