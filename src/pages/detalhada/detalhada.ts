@@ -1,26 +1,22 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-import { HomePage } from '../home/home';
-
 /*
-  Generated class for the Revisita page.
+  Generated class for the Detalhada page.
 
   See http://ionicframework.com/docs/v2/components/#navigation for more info on
   Ionic pages and navigation.
 */
-
 @Component({
-  selector: 'page-revisita',
-  templateUrl: 'revisita.html'
-
+  selector: 'page-detalhada',
+  templateUrl: 'detalhada.html'
 })
-export class RevisitaPage {
+export class DetalhadaPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad RevisitaPage');
+    console.log('ionViewDidLoad DetalhadaPage');
   }
 
 }

@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 import { RevisitaPage } from '../revisita/revisita';
+import { CriarPage } from '../criar/criar';
+
 
 @Component({
   selector: 'page-home',
@@ -24,6 +26,9 @@ export class HomePage {
 
   	openPage() {
       this.navCtrl.push(RevisitaPage);
+   }
+   openPageCriar() {
+      this.navCtrl.push(CriarPage);
    }
 
 

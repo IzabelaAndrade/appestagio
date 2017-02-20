@@ -16,11 +16,20 @@
 	<ion-list>
 		<ion-item>
 	    	<ion-label color="primary">E-mail</ion-label>
-	    	<ion-input placeholder="Text Input"></ion-input>
+	    	<ion-input></ion-input>
 	  	</ion-item>
 	  	<ion-item>
 	    	<ion-label color="primary">Senha</ion-label>
-	    	<ion-input placeholder="Senha"></ion-input>
+	    	<ion-input type="password"></ion-input>
 	  	</ion-item>
   </ion-list>
+  <button ion-button block icon-left (click)="openPageHome()">
+  		Entrar
+  </button>
+  <button ion-button clear (click)="openPageCadastro()">
+  		Ou Criar Conta
+  </button>
+  <button ion-button clear (click)="openPageRecuperarConta()">
+  		Esqueci minha senha
+  </button>
 </ion-content>
