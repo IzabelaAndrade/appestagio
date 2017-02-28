@@ -21,7 +21,7 @@ export class CriarPage {
   }
 
   openPage() {
-      this.navCtrl.push(HomePage);
+      this.navCtrl.pop(HomePage);
    }
 
 }

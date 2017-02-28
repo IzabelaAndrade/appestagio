@@ -23,26 +23,15 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
 
-/*  openPage(pagina) {
-	  	if (pagina = HomePage){
+  openPage(pagina: string) {
+	  	if (pagina == 'Home'){
 	      this.navCtrl.push(HomePage);
 	  	}
-	  	if (pagina = RecuperarContaPage){
+	  	if (pagina == 'RecuperarConta'){
 	      this.navCtrl.push(RecuperarContaPage);
 	  	}
-	  	if (pagina = CadastroPage){
+	  	if (pagina == 'Cadastro'){
 	      this.navCtrl.push(CadastroPage);
 	  	}
-   }*/
-
-   openPageHome() {
-	    this.navCtrl.push(HomePage);
-	}
-	openPageRecuperarConta() {
-	    this.navCtrl.push(RecuperarContaPage);
-	}
-	openPageCadastro() {
-	    this.navCtrl.push(CadastroPage);
-	}
-
+   }
 }

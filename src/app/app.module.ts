@@ -8,6 +8,7 @@ import { RevisitaPage } from '../pages/revisita/revisita';
 import { CriarPage } from '../pages/criar/criar';
 import { RecuperarContaPage } from '../pages/recuperar-conta/recuperar-conta';
 import { CadastroPage } from '../pages/cadastro/cadastro';
+import { ConfiguracaoPage } from '../pages/configuracao/configuracao';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CadastroPage } from '../pages/cadastro/cadastro';
     LoginPage,
     CriarPage,
     RecuperarContaPage,
-    CadastroPage
+    CadastroPage,
+    ConfiguracaoPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -30,7 +32,8 @@ import { CadastroPage } from '../pages/cadastro/cadastro';
     LoginPage,
     CriarPage,
     RecuperarContaPage,
-    CadastroPage
+    CadastroPage,
+    ConfiguracaoPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
