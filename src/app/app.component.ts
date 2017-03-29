@@ -4,6 +4,8 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
+import { ConcluidasPage } from '../pages/concluidas/concluidas';
+import { InativasPage } from '../pages/inativas/inativas';
 import { ConfiguracaoPage } from '../pages/configuracao/configuracao';
 
 @Component({
@@ -23,6 +25,8 @@ export class MyApp {
     this.pages= [
       {title: 'Revisitas', component: HomePage},
       {title: 'Configurações', component: ConfiguracaoPage},
+      {title: 'Revisitas Concluídas', component: ConcluidasPage},
+      {title: 'Revisitas Inativas', component: InativasPage}
     ]
 
     platform.ready().then(() => {

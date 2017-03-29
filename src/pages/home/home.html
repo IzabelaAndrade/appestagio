@@ -14,12 +14,11 @@
   	<ion-icon name="add"></ion-icon>
   		Nova Revista
   </button>
-  <ion-searchbar>
-</ion-searchbar>
-<ion-list>
-  <button ion-item *ngFor="let item of items" (click)="openPage()"> 
-    {{ item.nome }}
-  </button>  
-</ion-list>
+
+  <ion-list>
+    <button ion-item *ngFor="let revisita of revisitas" (click)="openPage(revisita)"> 
+      {{ revisita.nome }}
+    </button>  
+  </ion-list>
 
 </ion-content>

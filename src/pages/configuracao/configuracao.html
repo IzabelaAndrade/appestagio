@@ -7,6 +7,9 @@
 <ion-header>
 
   <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>Configurações</ion-title>
   </ion-navbar>
 
@@ -14,5 +17,26 @@
 
 
 <ion-content padding>
+
+	<ion-item>
+	  <ion-label> Emitir Notificação</ion-label>
+	  <ion-toggle checked="true"></ion-toggle>
+	</ion-item>
+	<button ion-button block (click)="ChangePassword()">
+  		Alterar Senha
+  	</button>
+	<div *ngIf="!showChangePassword">
+    <ion-item>
+      <ion-label floating>Digite a senha atual</ion-label>
+      <ion-input type="password" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Digite a nova senha</ion-label>
+      <ion-input type="password" ></ion-input>
+    </ion-item>
+    <button ion-button block>
+      Enviar
+    </button>  
+  </div>
 
 </ion-content>

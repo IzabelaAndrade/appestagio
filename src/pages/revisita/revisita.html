@@ -7,7 +7,10 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Revisita Detalhada</ion-title>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title> Revisita </ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,12 +18,14 @@
 
 <ion-content padding>
 
-	<button ion-button block>Concluir</button>
-	<h2 style="text-align: center;">Nome do morador</h2>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce egestas quam nisl, in accumsan sapien ultricies et. Cum sociis natoque penatibus et magnis dis parturient montes. Sed sed malesuada velit.</p>
-	<ion-item>
-  		<ion-label> Ativo</ion-label>
-  		<ion-toggle checked="true"></ion-toggle>
+	<button ion-button block>Editar</button>
+ 	<h2 style="text-align: center;">{{revisita.nome}}</h2>
+  <div #map id="map"></div> 
+	<p>{{revisita.info}}</p>
+	<p>{{revisita.data}}</p>
+  <ion-item>
+  	<ion-label> Ativo</ion-label>
+ 		<ion-toggle disabled checked="{{revisita.status}}"></ion-toggle> 
 	</ion-item>
-	<button id="edition" ion-button block>Editar</button>
+	<button ion-button block>Concluir</button>
 </ion-content>

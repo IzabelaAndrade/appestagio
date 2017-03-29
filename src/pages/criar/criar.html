@@ -7,6 +7,9 @@
 <ion-header>
 
   <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>Nova Revisita</ion-title>
   </ion-navbar>
 
@@ -14,24 +17,32 @@
 
 
 <ion-content padding>
-<ion-list>
 
-  <ion-item>
-    <ion-label floating>Nome</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
+  <div #map id="map"></div>
 
-  <ion-item>
-  	<ion-label floating>Anotações</ion-label>
-    <ion-textarea type="text"></ion-textarea>
-  </ion-item>
+  <ion-list>
 
-  <ion-item>
-  <ion-label > Ativo</ion-label>
-  <ion-toggle checked="true"></ion-toggle>
-</ion-item>
+    <ion-item>
+      <ion-label floating>Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="nome"></ion-input>
+    </ion-item>
 
-  <button ion-button block icon-left (click)="openPage()">Salvar</button>
+    <ion-item>
+    	<ion-label floating>Anotações</ion-label>
+      <ion-textarea type="text"[(ngModel)]="info"></ion-textarea>
+    </ion-item>
+    
 
-</ion-list>
+    <ion-item>
+      <ion-label>Data</ion-label>
+      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+    </ion-item>
+
+
+
+  </ion-list>
+
+  <button class="spaceButton" ion-button block icon-left (click)="saveGeolocation()">Salvar Localização</button>
+  <button class="spaceButton" ion-button block icon-left (click)="selectDate()">Agendar no Calendário</button>
+  <button id="salvarRevisita" ion-button block icon-left (click)="saveRevisita()">Salvar</button> 
 </ion-content>

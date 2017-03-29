@@ -13,10 +13,16 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class ConfiguracaoPage {
 
+  showChangePassword:boolean = true;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ConfiguracaoPage');
+  }
+
+  ChangePassword(){
+  	this.showChangePassword = false;
   }
 
 }

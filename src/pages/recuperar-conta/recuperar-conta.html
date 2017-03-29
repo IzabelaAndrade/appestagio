@@ -16,7 +16,7 @@
 <ion-content padding>
 
 	<div align="center">
-		<img style="width: 80px; height: 80px;" src="cadeado.png">
+    <ion-img style="width: 80px; height: 80px;" src="assets/img/cadeado.png"></ion-img>
 	</div>
 	
 	<p>
@@ -24,9 +24,25 @@
 	</p>
 	<ion-item>
     <ion-label floating>E-mail</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="email" [(ngModel)]="email"></ion-input>
   </ion-item>
-  <button ion-button block (click)="presentAlert()">
+  <button ion-button block (click)="sendEmail()">
   		Enviar
   </button>
+
+  <div *ngIf="!showRecoveryPassword">
+    <ion-item>
+      <ion-label floating>Digite a senha atual</ion-label>
+      <ion-input type="password" [(ngModel)]="resetCode"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Digite a nova senha</ion-label>
+      <ion-input type="password" [(ngModel)]="newPassword"></ion-input>
+    </ion-item>
+    <button ion-button block (click)="alterPassword()">
+      Alterar Senha
+    </button>  
+  </div>
+  
+
 </ion-content>
